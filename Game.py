@@ -5,9 +5,12 @@ computer_win=0
 options=["rock","paper","scissor"]
 
 while True:
-       user_input=input("Type rock/paper/scissor or q to quit? ").lower()
+       user_input=input("Type rock/paper/scissor or q to quit or s to view score? ").lower()
        if user_input=="q":
               break
+       if(user_input=="s"):
+              print(f"you win {user_win} times")
+              print(f"computer win {computer_win} times")
        if (user_input not in ["rock","paper","scissor"]):
               continue
        random_number=random.randint(0,2)
@@ -37,6 +40,4 @@ while True:
        else:
               print("you loose! ")
               computer_win+=1
-              continue
-print(f"you win {user_win} times")
-print(f"computer win {computer_win} times")    
+              continue    
